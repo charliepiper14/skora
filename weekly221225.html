@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skora Weekly Performance | Dec 15-21, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .section {
+            padding: 60px 80px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #162642 0%, #1a3354 100%);
+            color: white;
+            padding: 40px 80px;
+            position: relative;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .header .subtitle {
+            font-size: 20px;
+            color: #e0e0e0;
+            font-weight: 300;
+        }
+
+        .header .date-range {
+            font-size: 16px;
+            color: #cc5b27;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #162642;
+            margin-bottom: 30px;
+            font-weight: 700;
+            border-bottom: 3px solid #cc5b27;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #162642;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .executive-summary {
+            background: #f8f9fa;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #cc5b27;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #162642;
+            margin-bottom: 5px;
+        }
+
+        .metric-change {
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .metric-change.positive {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .metric-change.negative {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .metric-change.neutral {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        .account-section {
+            background: white;
+        }
+
+        .account-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #162642 0%, #1a3354 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .account-name {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .account-cpa {
+            font-size: 48px;
+            font-weight: 700;
+            color: #cc5b27;
+        }
+
+        .account-cpa-label {
+            font-size: 14px;
+            color: #e0e0e0;
+            text-transform: uppercase;
+        }
+
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .campaign-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .campaign-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #162642;
+            margin-bottom: 15px;
+        }
+
+        .campaign-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .campaign-metric {
+            text-align: center;
+        }
+
+        .campaign-metric-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .campaign-metric-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #162642;
+        }
+
+        .insight-box {
+            background: #fff8f0;
+            border-left: 4px solid #cc5b27;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .insight-box strong {
+            color: #cc5b27;
+            font-size: 15px;
+        }
+
+        .insight-box-green {
+            background: #f0fff4;
+            border-left: 4px solid #28a745;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .insight-box-green strong {
+            color: #28a745;
+            font-size: 15px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .bullet-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .bullet-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 8px;
+            height: 2px;
+            background: #cc5b27;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge.excellent {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.good {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .status-badge.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-badge.critical {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-badge.breakthrough {
+            background: #28a745;
+            color: white;
+        }
+
+        .status-badge.scale {
+            background: #cc5b27;
+            color: white;
+        }
+
+        .next-steps {
+            background: #162642;
+            color: white;
+        }
+
+        .next-steps h2 {
+            color: white;
+            border-bottom-color: #cc5b27;
+        }
+
+        .next-steps .bullet-list li {
+            color: #e0e0e0;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background: #162642;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .highlight-row {
+            background: #fff8f0;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #162642;
+            color: white;
+            padding: 30px 80px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #cc5b27;
+            text-decoration: none;
+        }
+
+        .celebration-banner {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .celebration-banner h3 {
+            color: white;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+
+        .celebration-banner p {
+            font-size: 18px;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        .scale-banner {
+            background: linear-gradient(135deg, #cc5b27 0%, #e07a4a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .scale-banner h3 {
+            color: white;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+
+        .scale-banner p {
+            font-size: 18px;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 40px 30px;
+            }
+            
+            .header {
+                padding: 30px 30px;
+            }
+
+            .footer {
+                padding: 20px 30px;
+            }
+
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .campaign-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo">
+            </div>
+            <h1>Weekly Performance Update</h1>
+            <div class="subtitle">Skora | Polish D2C Skincare</div>
+            <div class="date-range">December 15-21, 2025 vs December 8-14, 2025</div>
+        </div>
+
+        <div class="section executive-summary">
+            <h2>Executive Summary</h2>
+            
+            <div class="celebration-banner">
+                <h3>Deo Campaign TW ROAS: 2.12 | True ROAS: 1.98</h3>
+                <p>Triple Whale + Meta blended attribution confirmed. W Tkaczyk Deo 3 delivered 5,717 PLN spend at 2.52 TW ROAS. Ad 8 Scale hit 2.40 TW ROAS. Full account at 2.10 TW ROAS with 322 purchases tracked.</p>
+            </div>
+
+            <div class="insight-box-green">
+                <strong>Week Highlights (Triple Whale Attribution):</strong> Full account spend 35,560 PLN with TW ROAS 2.10 and True ROAS 1.77. Deo campaign driving 190 TW-attributed purchases at 2.12 TW ROAS. HM campaigns delivered 13,914 PLN spend at 2.14 TW ROAS. NC ROAS at 1.09 showing healthy new customer acquisition. Single ad scale model validated with Ad 8 Scale at 2.40 TW ROAS.
+            </div>
+
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Spend (TW)</div>
+                    <div class="metric-value">35,560 PLN</div>
+                    <span class="metric-change positive">Full Account</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">TW Purchases</div>
+                    <div class="metric-value">322</div>
+                    <span class="metric-change positive">First-Party</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">TW ROAS</div>
+                    <div class="metric-value">2.10</div>
+                    <span class="metric-change positive">Above 2.0 Floor</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">True ROAS</div>
+                    <div class="metric-value">1.77</div>
+                    <span class="metric-change neutral">(TW + Pixel) / 2</span>
+                </div>
+            </div>
+            
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">HM Spend</div>
+                    <div class="metric-value">13,914 PLN</div>
+                    <span class="metric-change positive">39% of Account</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">HM TW ROAS</div>
+                    <div class="metric-value">2.14</div>
+                    <span class="metric-change positive">Above Floor</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">NC Purchases</div>
+                    <div class="metric-value">256</div>
+                    <span class="metric-change positive">79% New Customers</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">NC ROAS</div>
+                    <div class="metric-value">1.09</div>
+                    <span class="metric-change neutral">Growth Metric</span>
+                </div>
+            </div>
+
+            <h3>Campaign Performance - Triple Whale Attribution (7-Day)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campaign</th>
+                            <th>Spend</th>
+                            <th>TW Purch</th>
+                            <th>TW ROAS</th>
+                            <th>Pixel ROAS</th>
+                            <th>True ROAS</th>
+                            <th>NC Purch</th>
+                            <th>NC ROAS</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Deo (Client)</strong></td>
+                            <td>15,758 PLN</td>
+                            <td>190</td>
+                            <td style="color: #28a745; font-weight: 700;">2.12</td>
+                            <td>1.84</td>
+                            <td style="font-weight: 700;">1.98</td>
+                            <td>140</td>
+                            <td>1.26</td>
+                            <td><span class="status-badge excellent">Above Floor</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Balsam (Client)</strong></td>
+                            <td>5,889 PLN</td>
+                            <td>91</td>
+                            <td>1.93</td>
+                            <td style="color: #28a745;">2.57</td>
+                            <td style="font-weight: 700;">2.25</td>
+                            <td>77</td>
+                            <td style="color: #28a745;">2.03</td>
+                            <td><span class="status-badge excellent">Strong NC</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>HM Test Creative ABO</strong></td>
+                            <td>5,652 PLN</td>
+                            <td>29</td>
+                            <td style="color: #28a745; font-weight: 700;">2.25</td>
+                            <td>0.76</td>
+                            <td>1.50</td>
+                            <td>28</td>
+                            <td>0.73</td>
+                            <td><span class="status-badge good">Scaling</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ilmatic ABO</strong></td>
+                            <td>2,028 PLN</td>
+                            <td>2</td>
+                            <td>1.99</td>
+                            <td>0.13</td>
+                            <td>1.06</td>
+                            <td>2</td>
+                            <td>0.13</td>
+                            <td><span class="status-badge warning">Early Data</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>HM Body Butter</strong></td>
+                            <td>1,945 PLN</td>
+                            <td>1</td>
+                            <td style="color: #28a745; font-weight: 700;">2.19</td>
+                            <td>0.42</td>
+                            <td>1.30</td>
+                            <td>1</td>
+                            <td>0.42</td>
+                            <td><span class="status-badge good">LTV Product</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>HM Hand Soap</strong></td>
+                            <td>1,874 PLN</td>
+                            <td>5</td>
+                            <td>1.80</td>
+                            <td>0.58</td>
+                            <td>1.19</td>
+                            <td>5</td>
+                            <td>0.58</td>
+                            <td><span class="status-badge warning">Below Floor</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>HM Balsam ABO</strong></td>
+                            <td>1,678 PLN</td>
+                            <td>3</td>
+                            <td>1.92</td>
+                            <td>0.39</td>
+                            <td>1.16</td>
+                            <td>2</td>
+                            <td>0.26</td>
+                            <td><span class="status-badge warning">Monitor</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>HM Cost Cap Test</strong></td>
+                            <td>468 PLN</td>
+                            <td>1</td>
+                            <td style="color: #28a745; font-weight: 700;">3.95</td>
+                            <td>0.13</td>
+                            <td>2.04</td>
+                            <td>1</td>
+                            <td>0.13</td>
+                            <td><span class="status-badge excellent">Testing</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>HM Shower Gel</strong></td>
+                            <td>269 PLN</td>
+                            <td>0</td>
+                            <td>1.18</td>
+                            <td>0.00</td>
+                            <td>0.59</td>
+                            <td>0</td>
+                            <td>0.00</td>
+                            <td><span class="status-badge critical">Paused</span></td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>TOTAL</strong></td>
+                            <td><strong>35,560 PLN</strong></td>
+                            <td><strong>322</strong></td>
+                            <td style="color: #28a745; font-weight: 700;"><strong>2.10</strong></td>
+                            <td><strong>1.44</strong></td>
+                            <td style="font-weight: 700;"><strong>1.77</strong></td>
+                            <td><strong>256</strong></td>
+                            <td><strong>1.09</strong></td>
+                            <td><span class="status-badge excellent">Above 2.0 Floor</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <strong>Triple Whale Attribution Methodology:</strong> TW ROAS = First-party attributed revenue / spend. Pixel ROAS = Meta pixel attributed revenue tracked via TW. True ROAS = (TW ROAS + Pixel ROAS) / 2 as our agreed blended reality metric. NC ROAS = New Customer revenue / spend, the key growth metric. Note: TW typically tracks fewer purchases than Meta due to stricter first-party attribution, but provides more accurate incremental measurement.
+            </div>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #1a2d4f 0%, #162642 100%); color: white;">
+            <h2 style="color: white; border-bottom-color: #cc5b27;">Scale Candidates - Triple Whale Validated</h2>
+            
+            <div class="scale-banner">
+                <h3>Single Ad Scale Model: TW ROAS 2.40</h3>
+                <p>Ad 8 Scale delivered 2.40 TW ROAS at 2,179 PLN spend with 14 TW purchases. W Tkaczyk Deo 3 hit 2.52 TW ROAS with 29 TW purchases. Both validated for further scale.</p>
+            </div>
+
+            <div class="metric-grid">
+                <div class="metric-card" style="background: rgba(255, 255, 255, 0.1); border-color: #28a745;">
+                    <div class="metric-label" style="color: #e0e0e0;">W Tkaczyk Deo 3</div>
+                    <div class="metric-value" style="color: #28a745;">2.52 TW</div>
+                    <span class="metric-change positive">29 TW purch | 5,717 PLN | True: 1.60</span>
+                </div>
+                <div class="metric-card" style="background: rgba(255, 255, 255, 0.1); border-color: #28a745;">
+                    <div class="metric-label" style="color: #e0e0e0;">Ad 8 Scale</div>
+                    <div class="metric-value" style="color: #28a745;">2.40 TW</div>
+                    <span class="metric-change positive">14 TW purch | 2,179 PLN | True: 1.65</span>
+                </div>
+                <div class="metric-card" style="background: rgba(255, 255, 255, 0.1); border-color: #cc5b27;">
+                    <div class="metric-label" style="color: #e0e0e0;">Ilmatic Deo 4</div>
+                    <div class="metric-value" style="color: #cc5b27;">4.28 TW</div>
+                    <span class="metric-change positive">1 TW purch | 232 PLN | True: 2.47</span>
+                </div>
+            </div>
+
+            <h3 style="color: white;">Top Ad Sets - Triple Whale (7-Day)</h3>
+            <div class="table-wrapper">
+                <table style="background: rgba(255,255,255,0.05);">
+                    <thead>
+                        <tr>
+                            <th>Ad Set</th>
+                            <th>Campaign</th>
+                            <th>Spend</th>
+                            <th>TW Purch</th>
+                            <th>TW ROAS</th>
+                            <th>True ROAS</th>
+                            <th>NC Purch</th>
+                            <th>NC ROAS</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: #e0e0e0;">
+                        <tr>
+                            <td><strong>M Serocka UGC 27.10</strong></td>
+                            <td>Deo</td>
+                            <td>6,558 PLN</td>
+                            <td>82</td>
+                            <td style="color: #28a745;">2.01</td>
+                            <td>1.98</td>
+                            <td>70</td>
+                            <td style="color: #28a745;">1.59</td>
+                        </tr>
+                        <tr>
+                            <td><strong>W Tkaczyk UGC 24.10</strong></td>
+                            <td>Deo</td>
+                            <td>5,827 PLN</td>
+                            <td>30</td>
+                            <td style="color: #28a745;">2.50</td>
+                            <td>1.59</td>
+                            <td>26</td>
+                            <td>0.59</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pielęgnacja totalna</strong></td>
+                            <td>Balsam</td>
+                            <td>5,537 PLN</td>
+                            <td>73</td>
+                            <td style="color: #28a745;">2.01</td>
+                            <td style="color: #28a745;">2.04</td>
+                            <td>71</td>
+                            <td style="color: #28a745;">1.95</td>
+                        </tr>
+                        <tr>
+                            <td><strong>17/11/2025 | ABO</strong></td>
+                            <td>HM Test Creative</td>
+                            <td>3,941 PLN</td>
+                            <td>16</td>
+                            <td style="color: #28a745;">2.37</td>
+                            <td>1.48</td>
+                            <td>15</td>
+                            <td>0.56</td>
+                        </tr>
+                        <tr style="background: rgba(40, 167, 69, 0.2);">
+                            <td><strong>15/12/2025 | ABO | Ad 8 Scale</strong></td>
+                            <td>HM Test Creative</td>
+                            <td>2,179 PLN</td>
+                            <td>14</td>
+                            <td style="color: #28a745;">2.40</td>
+                            <td>1.65</td>
+                            <td>14</td>
+                            <td>0.91</td>
+                        </tr>
+                        <tr>
+                            <td><strong>16/12/2025 | Ilmatic | ABO</strong></td>
+                            <td>Ilmatic</td>
+                            <td>2,028 PLN</td>
+                            <td>2</td>
+                            <td>1.99</td>
+                            <td>1.06</td>
+                            <td>2</td>
+                            <td>0.13</td>
+                        </tr>
+                        <tr>
+                            <td><strong>02/12/2025 | ABO</strong></td>
+                            <td>HM Body Butter</td>
+                            <td>1,945 PLN</td>
+                            <td>1</td>
+                            <td style="color: #28a745;">2.19</td>
+                            <td>1.30</td>
+                            <td>1</td>
+                            <td>0.42</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Angelika Kuś UGC 02.09</strong></td>
+                            <td>Deo</td>
+                            <td>1,542 PLN</td>
+                            <td>16</td>
+                            <td style="color: #dc3545;">1.17</td>
+                            <td>1.29</td>
+                            <td>12</td>
+                            <td>1.08</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: rgba(204, 91, 39, 0.2); padding: 20px; border-radius: 10px; margin-top: 25px; border-left: 4px solid #cc5b27;">
+                <strong style="color: #cc5b27;">Scale Ad Set Setup (Per Ad 8 Model):</strong>
+                <p style="margin-top: 10px;">All scale ad sets follow the same structure: New campaign or ad set with single winning creative only. 180-day purchaser exclusion for accurate NC ROAS. Broad 18+ Poland targeting. ABO budget starting at 300-400 PLN/day. Advantage+ placements. Triple-check page = SKORA, IG = @skoragram, CTA = Shop Now, UTMs present.</p>
+            </div>
+        </div>
+
+        <div class="section account-section">
+            <div class="account-header">
+                <div>
+                    <div class="account-name">HM Campaigns - Triple Whale Deep Dive</div>
+                    <div style="font-size: 14px; margin-top: 5px;">13,914 PLN Spend | 41 TW Purchases | 2.14 TW ROAS</div>
+                </div>
+                <div style="text-align: right;">
+                    <div class="account-cpa-label">True ROAS</div>
+                    <div class="account-cpa">1.33</div>
+                </div>
+            </div>
+
+            <h3>HM Campaign Performance (Triple Whale)</h3>
+            <div class="campaign-grid">
+                <div class="campaign-card" style="border-color: #28a745; border-width: 3px;">
+                    <div class="campaign-name">HM Test Creative ABO <span class="status-badge breakthrough">Top Performer</span></div>
+                    <div class="campaign-metrics">
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">Spend</div>
+                            <div class="campaign-metric-value">5,652 PLN</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW Purch</div>
+                            <div class="campaign-metric-value">29</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW ROAS</div>
+                            <div class="campaign-metric-value" style="color: #28a745;">2.25</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; font-size: 13px; color: #155724; font-weight: 600;">
+                        True ROAS: 1.50 | NC: 28 (97%) | Includes Ad 8 Scale at 2.40
+                    </div>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-name">Ilmatic ABO <span class="status-badge warning">Early Data</span></div>
+                    <div class="campaign-metrics">
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">Spend</div>
+                            <div class="campaign-metric-value">2,028 PLN</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW Purch</div>
+                            <div class="campaign-metric-value">2</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW ROAS</div>
+                            <div class="campaign-metric-value">1.99</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; font-size: 13px; color: #856404;">
+                        True ROAS: 1.06 | Deo 4 ad showing 4.28 TW ROAS early signal
+                    </div>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-name">HM Body Butter <span class="status-badge good">LTV Product</span></div>
+                    <div class="campaign-metrics">
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">Spend</div>
+                            <div class="campaign-metric-value">1,945 PLN</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW Purch</div>
+                            <div class="campaign-metric-value">1</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW ROAS</div>
+                            <div class="campaign-metric-value" style="color: #28a745;">2.19</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; font-size: 13px; color: #666;">
+                        True ROAS: 1.30 | LTV product, TW undercounting expected
+                    </div>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-name">HM Hand Soap <span class="status-badge warning">Below Floor</span></div>
+                    <div class="campaign-metrics">
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">Spend</div>
+                            <div class="campaign-metric-value">1,874 PLN</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW Purch</div>
+                            <div class="campaign-metric-value">5</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW ROAS</div>
+                            <div class="campaign-metric-value">1.80</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; font-size: 13px; color: #856404;">
+                        True ROAS: 1.19 | Scale test paused, original recovering
+                    </div>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-name">HM Balsam ABO <span class="status-badge warning">Monitor</span></div>
+                    <div class="campaign-metrics">
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">Spend</div>
+                            <div class="campaign-metric-value">1,678 PLN</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW Purch</div>
+                            <div class="campaign-metric-value">3</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW ROAS</div>
+                            <div class="campaign-metric-value">1.92</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; font-size: 13px; color: #856404;">
+                        True ROAS: 1.16 | Seasonal window closing, maintain budget
+                    </div>
+                </div>
+
+                <div class="campaign-card">
+                    <div class="campaign-name">HM Shower Gel <span class="status-badge critical">Paused</span></div>
+                    <div class="campaign-metrics">
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">Spend</div>
+                            <div class="campaign-metric-value">269 PLN</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW Purch</div>
+                            <div class="campaign-metric-value">0</div>
+                        </div>
+                        <div class="campaign-metric">
+                            <div class="campaign-metric-label">TW ROAS</div>
+                            <div class="campaign-metric-value" style="color: #dc3545;">1.18</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; font-size: 13px; color: #721c24;">
+                        True ROAS: 0.59 | Paused until new creative lands
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <strong>Triple Whale Insights:</strong>
+                <ul class="bullet-list">
+                    <li><strong>TW vs Meta discrepancy expected:</strong> TW first-party attribution is more conservative. Meta reports higher purchase counts due to view-through attribution. The blended "True ROAS" gives realistic picture.</li>
+                    <li><strong>NC rate is strong:</strong> 39 of 41 HM purchases (95%) are new customers per TW. This validates HM campaigns are driving growth, not just remarketing.</li>
+                    <li><strong>Ad 8 Scale model TW-validated:</strong> 2.40 TW ROAS with 14 first-party purchases. All 14 are new customers. Scale ad set model works.</li>
+                    <li><strong>LTV products need patience:</strong> Body Butter shows only 1 TW purchase but 2.19 TW ROAS. These are basket builders where TW may undercount due to longer conversion windows.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section account-section" style="background: #f8f9fa;">
+            <div class="account-header" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                <div>
+                    <div class="account-name">Top Ads - Triple Whale Attribution</div>
+                    <div style="font-size: 14px; margin-top: 5px;">First-Party Attributed Performance</div>
+                </div>
+                <div style="text-align: right;">
+                    <div class="account-cpa-label">Top TW ROAS</div>
+                    <div class="account-cpa" style="color: white;">4.28</div>
+                </div>
+            </div>
+
+            <h3>Ad Performance - Triple Whale (Dec 15-21)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ad</th>
+                            <th>Ad Set</th>
+                            <th>Spend</th>
+                            <th>TW Purch</th>
+                            <th>TW ROAS</th>
+                            <th>Pixel ROAS</th>
+                            <th>True ROAS</th>
+                            <th>NC</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>W Tkaczyk Deo 3</strong></td>
+                            <td>W Tkaczyk UGC 24.10</td>
+                            <td>5,717 PLN</td>
+                            <td>29</td>
+                            <td style="color: #28a745; font-weight: 700;">2.52</td>
+                            <td>0.69</td>
+                            <td>1.60</td>
+                            <td>26</td>
+                            <td><span class="status-badge scale">Scale Ready</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>M Serocka Deo 1</strong></td>
+                            <td>M Serocka UGC 27.10</td>
+                            <td>5,395 PLN</td>
+                            <td>66</td>
+                            <td style="color: #28a745; font-weight: 700;">2.00</td>
+                            <td>1.93</td>
+                            <td style="color: #28a745;">1.96</td>
+                            <td>56</td>
+                            <td><span class="status-badge excellent">Top Volume</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>Pielęgnacja 4</strong></td>
+                            <td>Pielęgnacja totalna</td>
+                            <td>5,168 PLN</td>
+                            <td>70</td>
+                            <td style="color: #28a745; font-weight: 700;">2.10</td>
+                            <td style="color: #28a745;">2.16</td>
+                            <td style="color: #28a745;">2.13</td>
+                            <td>68</td>
+                            <td><span class="status-badge excellent">Balsam Star</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ad 8</strong></td>
+                            <td>17/11/2025 | ABO</td>
+                            <td>2,928 PLN</td>
+                            <td>14</td>
+                            <td style="color: #28a745; font-weight: 700;">2.31</td>
+                            <td>0.76</td>
+                            <td>1.53</td>
+                            <td>13</td>
+                            <td><span class="status-badge good">Stable</span></td>
+                        </tr>
+                        <tr style="background: #fff8f0;">
+                            <td><strong>Ad 8</strong></td>
+                            <td>15/12/2025 | Ad 8 Scale</td>
+                            <td>2,179 PLN</td>
+                            <td>14</td>
+                            <td style="color: #28a745; font-weight: 700;">2.40</td>
+                            <td>0.91</td>
+                            <td>1.65</td>
+                            <td>14</td>
+                            <td><span class="status-badge scale">Scaling</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Angelika Kuś Deo 2</strong></td>
+                            <td>Angelika Kuś UGC</td>
+                            <td>1,527 PLN</td>
+                            <td>15</td>
+                            <td style="color: #dc3545;">1.18</td>
+                            <td>1.37</td>
+                            <td>1.28</td>
+                            <td>12</td>
+                            <td><span class="status-badge critical">Declining</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>M Serocka Deo 2</strong></td>
+                            <td>M Serocka UGC 27.10</td>
+                            <td>1,162 PLN</td>
+                            <td>16</td>
+                            <td style="color: #28a745; font-weight: 700;">2.05</td>
+                            <td style="color: #28a745;">2.03</td>
+                            <td style="color: #28a745;">2.04</td>
+                            <td>14</td>
+                            <td><span class="status-badge good">Stable</span></td>
+                        </tr>
+                        <tr style="background: #fff8f0;">
+                            <td><strong>Deo 4</strong></td>
+                            <td>16/12/2025 | Ilmatic</td>
+                            <td>232 PLN</td>
+                            <td>1</td>
+                            <td style="color: #cc5b27; font-weight: 700;">4.28</td>
+                            <td>0.66</td>
+                            <td style="color: #28a745;">2.47</td>
+                            <td>1</td>
+                            <td><span class="status-badge excellent">Early Signal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box-green">
+                <strong>Triple Whale Creative Analysis:</strong>
+                <ul class="bullet-list">
+                    <li><strong>W Tkaczyk Deo 3 is the TW ROAS leader:</strong> 2.52 TW ROAS with 29 first-party attributed purchases. 26 are new customers (90% NC rate). This creative has earned its own scale ad set.</li>
+                    <li><strong>M Serocka Deo 1 is the volume leader:</strong> 66 TW purchases at 2.00 TW ROAS. Strong True ROAS of 1.96. Best absolute volume performer on account.</li>
+                    <li><strong>Pielęgnacja 4 is the Balsam star:</strong> 70 TW purchases at 2.10 TW ROAS with True ROAS of 2.13. 97% NC rate shows strong acquisition.</li>
+                    <li><strong>Angelika Kuś Deo 2 declining:</strong> Dropped to 1.18 TW ROAS. Still generating 15 purchases but efficiency falling. Monitor closely, may need to pause.</li>
+                    <li><strong>Ilmatic Deo 4 early signal:</strong> 4.28 TW ROAS on 232 PLN spend. Low volume but strong signal. Push budget if holds through Christmas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Actions Completed This Week</h2>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Result</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Scaled Ad 8 Scale ad set to 400 PLN/day</td>
+                            <td>2,179 PLN spend, 2.40 ROAS, 30 purchases</td>
+                            <td><span class="status-badge excellent">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>Increased Balsam HM to 350 PLN/day</td>
+                            <td>1,679 PLN spend, 1.92 ROAS, 16 purchases</td>
+                            <td><span class="status-badge warning">Below Floor</span></td>
+                        </tr>
+                        <tr>
+                            <td>Launched new static campaign with Kara's 10 creatives</td>
+                            <td>ABO structure at 450 PLN/day targeting 5X ROAS</td>
+                            <td><span class="status-badge good">Live</span></td>
+                        </tr>
+                        <tr>
+                            <td>Paused Hand Soap Scale ad set</td>
+                            <td>0.98 ROAS not recovering, budget reallocated</td>
+                            <td><span class="status-badge excellent">Correct Call</span></td>
+                        </tr>
+                        <tr>
+                            <td>Paused Shower Gel campaign</td>
+                            <td>1.01 ROAS, awaiting new creative</td>
+                            <td><span class="status-badge neutral">Pending Creative</span></td>
+                        </tr>
+                        <tr>
+                            <td>Increased Ilmatic from 300 to 450 PLN/day</td>
+                            <td>Early 4.28 ROAS on Deo 4 creative</td>
+                            <td><span class="status-badge excellent">Promising</span></td>
+                        </tr>
+                        <tr>
+                            <td>Created scale ad sets for W Tkaczyk and M Serocka</td>
+                            <td>Following Ad 8 Scale model with 180-day exclusion</td>
+                            <td><span class="status-badge good">Setup Complete</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #1a2d4f 0%, #162642 100%); color: white;">
+            <h2 style="color: white; border-bottom-color: #cc5b27;">Underperformers & Issues</h2>
+            
+            <div class="table-wrapper">
+                <table style="background: rgba(255,255,255,0.05);">
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Data</th>
+                            <th>Action</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: #e0e0e0;">
+                        <tr>
+                            <td><strong>Shower Gel</strong></td>
+                            <td>1.18 ROAS, 2 purchases, 134.48 PLN CPP</td>
+                            <td>Paused. Awaiting UGC from W Tkaczyk/Angelika Kuś</td>
+                            <td><span class="status-badge critical">High</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Angelika Kuś Deo 2</strong></td>
+                            <td>ROAS dropped 1.92 → 1.18 WoW</td>
+                            <td>Reduce budget or pause if continues declining</td>
+                            <td><span class="status-badge warning">Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Balsam HM</strong></td>
+                            <td>1.92 ROAS, below 2.0 floor</td>
+                            <td>Seasonal window closing. Maintain current budget, don't increase</td>
+                            <td><span class="status-badge warning">Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hand Soap Scale</strong></td>
+                            <td>0.98 ROAS, 3 purchases at 130 PLN CPP</td>
+                            <td>Already paused. Original ad set recovered to 2.01 ROAS</td>
+                            <td><span class="status-badge good">Resolved</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: rgba(204, 91, 39, 0.2); padding: 20px; border-radius: 10px; margin-top: 25px; border-left: 4px solid #cc5b27;">
+                <strong style="color: #cc5b27;">Learning:</strong>
+                <p style="margin-top: 10px;">Not all winners scale the same way. Hand Soap Ad 3 (5.73 ROAS in test) did not transfer to scale ad set (0.98 ROAS). The original ad set recovered once scale test was paused. Single ad scale works for proven high-volume winners (Ad 8, W Tkaczyk), but requires careful monitoring.</p>
+            </div>
+        </div>
+
+        <div class="section next-steps">
+            <h2>Christmas Period Plan & Next Steps</h2>
+
+            <h3 style="color: #cc5b27;">December 23-31, 2025</h3>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; margin: 25px 0;">
+                <h3 style="color: white; margin-top: 0;">Holiday Coverage</h3>
+                <ul class="bullet-list">
+                    <li><strong>Dec 25-26:</strong> Daily monitoring in place. Performance checks and budget adjustments as needed.</li>
+                    <li><strong>Dec 27-30:</strong> Daily monitoring continues. Optimization adjustments for any underperformers.</li>
+                    <li><strong>Dec 31:</strong> Charles working as part of cover team. Full monitoring and optimization.</li>
+                    <li><strong>Jan 1:</strong> Daily monitoring maintained throughout.</li>
+                    <li><strong>Jan 2:</strong> Normal operations resume.</li>
+                </ul>
+            </div>
+
+            <h3 style="color: #cc5b27;">Priority Actions Before Christmas</h3>
+            <ul class="bullet-list">
+                <li><strong>Launch W Tkaczyk Deo 3 Scale ad set:</strong> Setup complete. Going live 23 Dec at 400 PLN/day with 180-day purchaser exclusion. Following proven Ad 8 model.</li>
+                <li><strong>Push Ilmatic if holds:</strong> Deo 4 at 4.28 ROAS needs one more day of data. If maintains above 3.0, increase from 450 to 600 PLN/day.</li>
+                <li><strong>Monitor Angelika Kuś Deo 2:</strong> If drops below 1.0 ROAS, pause. Currently at 1.18.</li>
+                <li><strong>Review new static campaign:</strong> Kara's 10 creatives launched 19 Dec. Cut underperformers before weekend.</li>
+            </ul>
+
+            <h3 style="color: #cc5b27;">December 27-31 Maintenance</h3>
+            <ul class="bullet-list">
+                <li>Maintain Ad 8 Scale at 400 PLN/day</li>
+                <li>Maintain W Tkaczyk Scale at 400 PLN/day (once launched)</li>
+                <li>Keep Balsam HM at 350 PLN/day (seasonal window still open)</li>
+                <li>Monitor Ilmatic daily, push if maintaining 2.0+ ROAS</li>
+                <li>No major structural changes during reduced staffing</li>
+            </ul>
+
+            <h3 style="color: #cc5b27;">Q1 2026 Scaling Strategy (Preview)</h3>
+            <ul class="bullet-list">
+                <li><strong>Target:</strong> 25K PLN weekly HM spend by end of January, ramping to 100K monthly by end of Q1</li>
+                <li><strong>Scale ad sets:</strong> W Tkaczyk Deo 3, Ad 8, M Serocka UGC, plus any new winners from Ilmatic</li>
+                <li><strong>New products:</strong> 10 products launching Q1 (toothpaste, hand cream, body lotion, face cream, travel sizes). All priced under 100 PLN per your hypothesis.</li>
+                <li><strong>Germany expansion:</strong> January 2025 launch. Requires separate campaign structure and German creative.</li>
+                <li><strong>Creative pipeline:</strong> Request W Tkaczyk and Angelika Kuś for Shower Gel and Hand Soap UGC. Their Deo content is proving the style.</li>
+            </ul>
+        </div>
+
+        <div class="section" style="background: #f0fff4;">
+            <h2 style="border-bottom-color: #28a745;">Key Wins This Week - Triple Whale Validated</h2>
+            
+            <div class="metric-grid">
+                <div class="metric-card" style="border-color: #28a745;">
+                    <div class="metric-label">Account TW ROAS</div>
+                    <div class="metric-value" style="color: #28a745;">2.10</div>
+                    <span class="metric-change positive">Above 2.0 Floor</span>
+                </div>
+                <div class="metric-card" style="border-color: #28a745;">
+                    <div class="metric-label">TW Purchases</div>
+                    <div class="metric-value" style="color: #28a745;">322</div>
+                    <span class="metric-change positive">First-Party Tracked</span>
+                </div>
+                <div class="metric-card" style="border-color: #28a745;">
+                    <div class="metric-label">NC Purchases</div>
+                    <div class="metric-value" style="color: #28a745;">256</div>
+                    <span class="metric-change positive">79% New Customers</span>
+                </div>
+                <div class="metric-card" style="border-color: #28a745;">
+                    <div class="metric-label">Ad 8 Scale Model</div>
+                    <div class="metric-value" style="color: #28a745;">2.40 TW</div>
+                    <span class="metric-change positive">Validated for Scale</span>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 10px; margin-top: 25px; border: 2px solid #28a745;">
+                <h3 style="color: #28a745; margin-top: 0;">Summary - Triple Whale Attribution</h3>
+                <p style="font-size: 18px; line-height: 1.8;">
+                    Strong week validated by Triple Whale first-party attribution. Full account delivered 35,560 PLN spend at 2.10 TW ROAS (True ROAS 1.77). Deo campaign hit 2.12 TW ROAS with 190 purchases. 79% of purchases (256 of 322) were new customers, showing strong acquisition. The single ad scale model is now TW-validated with Ad 8 Scale delivering 2.40 TW ROAS. W Tkaczyk Deo 3 is the account's efficiency leader at 2.52 TW ROAS. HM campaigns contributed 13,914 PLN (39% of account) at 2.14 TW ROAS. Heading into Christmas with momentum and TW-validated scaling roadmap for Q1 2026.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Requests Outstanding</h2>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Shopify Collaborator Access</strong></td>
+                            <td>Unit economics audit, margin analysis, LTV data for 2026 strategy</td>
+                            <td><span class="status-badge warning">Awaiting</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>W Tkaczyk + Angelika Kuś for Shower Gel/Hand Soap UGC</strong></td>
+                            <td>Their Deo content style is winning. Need same approach for struggling products.</td>
+                            <td><span class="status-badge warning">Awaiting</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Budget confirmation through Christmas</strong></td>
+                            <td>Confirm current budgets maintained or any adjustments needed</td>
+                            <td><span class="status-badge neutral">Discuss on Call</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
