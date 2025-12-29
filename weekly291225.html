@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skora Post-Christmas Recovery | Dec 29, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .section {
+            padding: 60px 80px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #162642 0%, #1a3354 100%);
+            color: white;
+            padding: 40px 80px;
+            position: relative;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .header .subtitle {
+            font-size: 20px;
+            color: #e0e0e0;
+            font-weight: 300;
+        }
+
+        .header .date-range {
+            font-size: 16px;
+            color: #cc5b27;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #162642;
+            margin-bottom: 30px;
+            font-weight: 700;
+            border-bottom: 3px solid #cc5b27;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #162642;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .executive-summary {
+            background: #f8f9fa;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #cc5b27;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #162642;
+            margin-bottom: 5px;
+        }
+
+        .metric-change {
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .metric-change.positive {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .metric-change.negative {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .metric-change.neutral {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        .insight-box {
+            background: #fff8f0;
+            border-left: 4px solid #cc5b27;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .insight-box strong {
+            color: #cc5b27;
+            font-size: 15px;
+        }
+
+        .insight-box-green {
+            background: #f0fff4;
+            border-left: 4px solid #28a745;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .insight-box-green strong {
+            color: #28a745;
+            font-size: 15px;
+        }
+
+        .insight-box-red {
+            background: #fff5f5;
+            border-left: 4px solid #dc3545;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .insight-box-red strong {
+            color: #dc3545;
+            font-size: 15px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .bullet-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .bullet-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 8px;
+            height: 2px;
+            background: #cc5b27;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge.excellent {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.good {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .status-badge.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-badge.critical {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-badge.scale {
+            background: #cc5b27;
+            color: white;
+        }
+
+        .status-badge.hold {
+            background: #6c757d;
+            color: white;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th {
+            background: #162642;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .highlight-row {
+            background: #fff8f0;
+            font-weight: 600;
+        }
+
+        .scale-banner {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .scale-banner h3 {
+            color: white;
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+
+        .scale-banner p {
+            font-size: 18px;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        .action-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .action-card.scale {
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+
+        .action-card.hold {
+            border-color: #ffc107;
+            background: #fffdf0;
+        }
+
+        .action-card.pause {
+            border-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .action-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .action-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #162642;
+        }
+
+        .action-budget {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .action-budget.increase {
+            color: #28a745;
+        }
+
+        .action-budget.decrease {
+            color: #dc3545;
+        }
+
+        .action-budget.hold {
+            color: #6c757d;
+        }
+
+        .trajectory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .trajectory-day {
+            text-align: center;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .trajectory-date {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .trajectory-value {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .trajectory-value.good {
+            color: #28a745;
+        }
+
+        .trajectory-value.bad {
+            color: #dc3545;
+        }
+
+        .trajectory-value.neutral {
+            color: #6c757d;
+        }
+
+        .footer {
+            background: #162642;
+            color: white;
+            padding: 30px 80px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .next-steps {
+            background: #162642;
+            color: white;
+        }
+
+        .next-steps h2 {
+            color: white;
+            border-bottom-color: #cc5b27;
+        }
+
+        .next-steps .bullet-list li {
+            color: #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 40px 30px;
+            }
+            
+            .header {
+                padding: 30px 30px;
+            }
+
+            .footer {
+                padding: 20px 30px;
+            }
+
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trajectory-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Heath Media Logo">
+            </div>
+            <h1>Post-Christmas Recovery Plan</h1>
+            <div class="subtitle">Skora | Strategic Scaling Roadmap</div>
+            <div class="date-range">December 29, 2025 | Triple Whale Attribution Analysis</div>
+        </div>
+
+        <div class="section executive-summary">
+            <h2>Recovery Assessment (Dec 26-29)</h2>
+            
+            <div class="scale-banner">
+                <h3>7 Ads Above 2.0 Floor | Ready for Gentle Scale</h3>
+                <p>Post-Christmas signals returning. M Serocka Deo at 3.24 True ROAS. Sold out green Scale recovered to 2.30. Balsam Ad 5 and Ad 9 holding strong. Conservative 20% daily increases where data supports.</p>
+            </div>
+
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">4-Day Spend</div>
+                    <div class="metric-value">5,582 PLN</div>
+                    <span class="metric-change neutral">Dec 26-29</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Pixel Purchases</div>
+                    <div class="metric-value">80</div>
+                    <span class="metric-change positive">Signals Returning</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Avg Daily CPA</div>
+                    <div class="metric-value">70 PLN</div>
+                    <span class="metric-change positive">Below 75 Target</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Scale Candidates</div>
+                    <div class="metric-value">7 Ads</div>
+                    <span class="metric-change positive">Above 2.0 Floor</span>
+                </div>
+            </div>
+
+            <h3>Daily Trend Analysis</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Spend</th>
+                            <th>Purchases</th>
+                            <th>TW ROAS</th>
+                            <th>Pixel ROAS</th>
+                            <th>True ROAS</th>
+                            <th>CPA</th>
+                            <th>Trend</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dec 26</td>
+                            <td>955 PLN</td>
+                            <td>24</td>
+                            <td>0.85</td>
+                            <td>1.31</td>
+                            <td>1.08</td>
+                            <td>40 PLN</td>
+                            <td><span class="status-badge good">Recovery Start</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 27</td>
+                            <td>1,679 PLN</td>
+                            <td>17</td>
+                            <td>0.91</td>
+                            <td>1.17</td>
+                            <td>1.04</td>
+                            <td>99 PLN</td>
+                            <td><span class="status-badge warning">Budget Push</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>Dec 28</strong></td>
+                            <td><strong>2,436 PLN</strong></td>
+                            <td><strong>34</strong></td>
+                            <td>0.54</td>
+                            <td>0.22</td>
+                            <td>0.38</td>
+                            <td><strong>72 PLN</strong></td>
+                            <td><span class="status-badge excellent">Volume Returned</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 29 (partial)</td>
+                            <td>511 PLN</td>
+                            <td>5</td>
+                            <td>8.71</td>
+                            <td>0.11</td>
+                            <td>4.41</td>
+                            <td>102 PLN</td>
+                            <td><span class="status-badge neutral">Early Data</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box-green">
+                <strong>Key Insight:</strong> Dec 28 delivered 34 purchases at 72 PLN CPA, the strongest volume day since pre-Christmas. Purchase signals are back. The low True ROAS reflects attribution lag, not weak performance. Today's partial data already showing strong TW attribution.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Scale Candidates (Above 2.0 Floor)</h2>
+            
+            <p style="margin-bottom: 30px; font-size: 16px; color: #666;">Only ads with True ROAS above 2.0 floor across Dec 26-29 qualify for budget increases. Gentle 20% daily increases to protect performance.</p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ad</th>
+                            <th>Campaign</th>
+                            <th>Spend</th>
+                            <th>Purch</th>
+                            <th>TW ROAS</th>
+                            <th>Pixel ROAS</th>
+                            <th>True ROAS</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>M Serocka Deo 2</strong></td>
+                            <td>Client Deo</td>
+                            <td>118 PLN</td>
+                            <td>4</td>
+                            <td>0.46</td>
+                            <td style="color: #28a745; font-weight: 700;">6.05</td>
+                            <td style="color: #28a745; font-weight: 700;">3.26</td>
+                            <td><span class="status-badge scale">Scale Ready</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>M Serocka Deo 1</strong></td>
+                            <td>Client Deo</td>
+                            <td>285 PLN</td>
+                            <td>7</td>
+                            <td style="color: #28a745;">2.96</td>
+                            <td style="color: #28a745;">3.53</td>
+                            <td style="color: #28a745; font-weight: 700;">3.24</td>
+                            <td><span class="status-badge scale">Scale Ready</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>Balsam Ad 5</strong></td>
+                            <td>HM Balsam ABO</td>
+                            <td>318 PLN</td>
+                            <td>2</td>
+                            <td style="color: #28a745;">3.97</td>
+                            <td>1.32</td>
+                            <td style="color: #28a745; font-weight: 700;">2.64</td>
+                            <td><span class="status-badge scale">Scale Ready</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>Balsam Ad 9</strong></td>
+                            <td>HM Balsam ABO</td>
+                            <td>248 PLN</td>
+                            <td>0</td>
+                            <td style="color: #28a745;">4.90</td>
+                            <td>0.00</td>
+                            <td style="color: #28a745; font-weight: 700;">2.45</td>
+                            <td><span class="status-badge scale">Scale Ready</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>W Tkaczyk Deo 1</strong></td>
+                            <td>Client Deo</td>
+                            <td>29 PLN</td>
+                            <td>0</td>
+                            <td style="color: #28a745;">4.79</td>
+                            <td>0.00</td>
+                            <td style="color: #28a745; font-weight: 700;">2.40</td>
+                            <td><span class="status-badge good">Early Signal</span></td>
+                        </tr>
+                        <tr style="background: #f0fff4;">
+                            <td><strong>Sold out green 1 Scale</strong></td>
+                            <td>HM Deo ABO</td>
+                            <td>238 PLN</td>
+                            <td>3</td>
+                            <td style="color: #28a745;">3.46</td>
+                            <td>1.13</td>
+                            <td style="color: #28a745; font-weight: 700;">2.30</td>
+                            <td><span class="status-badge scale">Scale Ready</span></td>
+                        </tr>
+                        <tr style="background: #fff8f0;">
+                            <td><strong>Ad 8</strong></td>
+                            <td>HM Deo ABO</td>
+                            <td>336 PLN</td>
+                            <td>6</td>
+                            <td>1.66</td>
+                            <td style="color: #28a745;">2.34</td>
+                            <td style="font-weight: 700;">2.00</td>
+                            <td><span class="status-badge hold">At Floor</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Sold out green 1 Scale: Daily Trajectory</h3>
+            <div class="action-card scale">
+                <div class="action-header">
+                    <div class="action-title">Strong Recovery Pattern</div>
+                    <span class="status-badge scale">Increase Budget</span>
+                </div>
+                <div class="trajectory-grid">
+                    <div class="trajectory-day">
+                        <div class="trajectory-date">Dec 26</div>
+                        <div class="trajectory-value bad">0.00</div>
+                        <div style="font-size: 11px; color: #666;">65 PLN</div>
+                    </div>
+                    <div class="trajectory-day">
+                        <div class="trajectory-date">Dec 27</div>
+                        <div class="trajectory-value bad">0.00</div>
+                        <div style="font-size: 11px; color: #666;">44 PLN</div>
+                    </div>
+                    <div class="trajectory-day">
+                        <div class="trajectory-date">Dec 28</div>
+                        <div class="trajectory-value good">5.03</div>
+                        <div style="font-size: 11px; color: #666;">111 PLN | 3 purch</div>
+                    </div>
+                    <div class="trajectory-day">
+                        <div class="trajectory-date">Dec 29</div>
+                        <div class="trajectory-value good">4.16</div>
+                        <div style="font-size: 11px; color: #666;">17 PLN (early)</div>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; font-size: 14px;">Two consecutive days above floor. Dec 28 delivered 3 purchases at 37 PLN CPA. Pattern supports 20% budget increase.</p>
+            </div>
+        </div>
+
+        <div class="section" style="background: #f8f9fa;">
+            <h2>Budget Actions: December 29</h2>
+
+            <div class="action-card scale">
+                <div class="action-header">
+                    <div class="action-title">Balsam ABO</div>
+                    <div class="action-budget increase">250 → 280 PLN/day</div>
+                </div>
+                <p><strong>Rationale:</strong> Ad 5 at 2.64 True ROAS with 2 purchases. Ad 9 at 2.45 True ROAS. Both above floor for 4 consecutive days. Conservative 12% increase.</p>
+                <p style="margin-top: 10px;"><strong>Ads to keep active:</strong> Ad 5, Ad 9 only. Turn off Ad 8, Ad 3, Ad 4 (below floor).</p>
+            </div>
+
+            <div class="action-card scale">
+                <div class="action-header">
+                    <div class="action-title">Sold out green 1 Scale</div>
+                    <div class="action-budget increase">85 → 100 PLN/day</div>
+                </div>
+                <p><strong>Rationale:</strong> Dec 28 breakout at 5.03 True ROAS with 3 purchases. Dec 29 holding at 4.16. Two consecutive days above floor warrants 18% increase.</p>
+            </div>
+
+            <div class="action-card hold">
+                <div class="action-header">
+                    <div class="action-title">HM Deo ABO (17/11/2025)</div>
+                    <div class="action-budget hold">130 PLN/day HOLD</div>
+                </div>
+                <p><strong>Rationale:</strong> Ad 8 at 2.00 True ROAS exactly at floor. Dec 28 showed 1 purchase at 146 PLN CPA, higher than target. Hold budget until 2 consecutive days above 2.5 True ROAS.</p>
+            </div>
+
+            <div class="action-card hold">
+                <div class="action-header">
+                    <div class="action-title">CC1 ABO</div>
+                    <div class="action-budget hold">350 PLN/day HOLD</div>
+                </div>
+                <p><strong>Rationale:</strong> Mixed signals. Ad 8 in CC1 at 0.41 True ROAS (different from HM Deo Ad 8). Ad 9 showing 1.64 True ROAS borderline. Monitor for 2 more days before action.</p>
+            </div>
+
+            <div class="action-card pause">
+                <div class="action-header">
+                    <div class="action-title">Body Butter ABO</div>
+                    <div class="action-budget decrease">50 → PAUSE</div>
+                </div>
+                <p><strong>Rationale:</strong> 277 PLN spent at 0.23 True ROAS over 4 days. Zero purchases. No recovery signal. Pause until new creative available.</p>
+            </div>
+
+            <div class="action-card pause">
+                <div class="action-header">
+                    <div class="action-title">Ilmatic ABO</div>
+                    <div class="action-budget decrease">50 → 25 PLN/day</div>
+                </div>
+                <p><strong>Rationale:</strong> 370 PLN spent at 0.32 True ROAS. Deo 2 at 1.06 True ROAS borderline but Deo 4, Soap at 0.00. Reduce to minimum viable test budget. Keep Deo 2 only.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Below Floor: Do Not Scale</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ad</th>
+                            <th>Campaign</th>
+                            <th>Spend</th>
+                            <th>Purch</th>
+                            <th>True ROAS</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pielęgnacja 4</td>
+                            <td>Client Balsam</td>
+                            <td>1,150 PLN</td>
+                            <td>15</td>
+                            <td style="color: #856404;">1.98</td>
+                            <td><span class="status-badge warning">Just Below - Monitor</span></td>
+                        </tr>
+                        <tr>
+                            <td>W Tkaczyk Deo 3</td>
+                            <td>Client Deo</td>
+                            <td>959 PLN</td>
+                            <td>10</td>
+                            <td style="color: #856404;">1.47</td>
+                            <td><span class="status-badge warning">Volume Driver - Hold</span></td>
+                        </tr>
+                        <tr>
+                            <td>CC1 Ad 8</td>
+                            <td>HM CC1 ABO</td>
+                            <td>523 PLN</td>
+                            <td>1</td>
+                            <td style="color: #dc3545;">0.41</td>
+                            <td><span class="status-badge critical">Turn Off</span></td>
+                        </tr>
+                        <tr>
+                            <td>Body Butter Ad 5</td>
+                            <td>HM Body Butter</td>
+                            <td>187 PLN</td>
+                            <td>0</td>
+                            <td style="color: #dc3545;">0.86</td>
+                            <td><span class="status-badge critical">Pause Campaign</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ilmatic Deo 4</td>
+                            <td>Ilmatic ABO</td>
+                            <td>127 PLN</td>
+                            <td>0</td>
+                            <td style="color: #dc3545;">0.00</td>
+                            <td><span class="status-badge critical">Turn Off</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ilmatic Soap</td>
+                            <td>Ilmatic ABO</td>
+                            <td>77 PLN</td>
+                            <td>0</td>
+                            <td style="color: #dc3545;">0.00</td>
+                            <td><span class="status-badge critical">Turn Off</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box-red">
+                <strong>Important Note on Client Ads:</strong> Pielęgnacja 4 (1.98 True ROAS) and W Tkaczyk Deo 3 (1.47 True ROAS) are high-volume drivers in client campaigns. Budget decisions on these are Alex's call. They're generating purchases but below the 2.0 efficiency floor.
+            </div>
+        </div>
+
+        <div class="section" style="background: linear-gradient(135deg, #1a2d4f 0%, #162642 100%); color: white;">
+            <h2 style="color: white; border-bottom-color: #cc5b27;">Reactivation Criteria</h2>
+            
+            <p style="margin-bottom: 30px; font-size: 16px; color: #e0e0e0;">Scale ad sets paused before Christmas require strict criteria before reactivation.</p>
+
+            <div class="table-wrapper">
+                <table style="background: rgba(255,255,255,0.05);">
+                    <thead>
+                        <tr>
+                            <th>Scale Ad Set</th>
+                            <th>Pre-Christmas ROAS</th>
+                            <th>Reactivation Criteria</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: #e0e0e0;">
+                        <tr>
+                            <td><strong>Ad 8 Scale</strong></td>
+                            <td>1.35 True ROAS</td>
+                            <td>Original Ad 8 must hit 2.5+ True ROAS for 2 consecutive days</td>
+                            <td><span class="status-badge warning">Not Ready</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>W Tkaczyk Scale</strong></td>
+                            <td>0.94 True ROAS</td>
+                            <td>Original W Tkaczyk Deo 3 must hit 2.0+ True ROAS for 2 consecutive days</td>
+                            <td><span class="status-badge critical">Not Ready</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>M Serocka Scale</strong></td>
+                            <td>0.74 True ROAS</td>
+                            <td>Original M Serocka Deo 1 at 3.24 True ROAS - QUALIFIES</td>
+                            <td><span class="status-badge excellent">Ready to Test</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: rgba(40, 167, 69, 0.2); padding: 20px; border-radius: 10px; margin-top: 25px; border-left: 4px solid #28a745;">
+                <strong style="color: #28a745;">M Serocka Scale Reactivation:</strong>
+                <p style="margin-top: 10px; color: #e0e0e0;">Original M Serocka Deo 1 showing 3.24 True ROAS with 7 purchases over Dec 26-29. This qualifies for scale ad set reactivation. Recommend reactivating M Serocka Scale at 50 PLN/day (50% of previous budget) on Dec 30 if Dec 29 holds above 2.5.</p>
+            </div>
+        </div>
+
+        <div class="section next-steps">
+            <h2>Scaling Roadmap: Dec 29 - Jan 5</h2>
+
+            <h3 style="color: #cc5b27;">Daily Protocol</h3>
+            <ul class="bullet-list">
+                <li>Check Triple Whale by 10am each day</li>
+                <li>Only increase budgets if previous day True ROAS above 2.0</li>
+                <li>Maximum 20% daily increase on any ad set</li>
+                <li>Pause any ad showing 0.00 ROAS for 2 consecutive days</li>
+                <li>Screenshot confirmations after every change</li>
+            </ul>
+
+            <h3 style="color: #cc5b27;">Budget Trajectory (If Performance Holds)</h3>
+            <div class="table-wrapper">
+                <table style="background: rgba(255,255,255,0.05);">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Balsam ABO</th>
+                            <th>Sold out Scale</th>
+                            <th>HM Deo ABO</th>
+                            <th>Total HM Daily</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: #e0e0e0;">
+                        <tr>
+                            <td>Dec 29</td>
+                            <td>280 PLN</td>
+                            <td>100 PLN</td>
+                            <td>130 PLN</td>
+                            <td><strong>510 PLN</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 30</td>
+                            <td>300 PLN</td>
+                            <td>120 PLN</td>
+                            <td>130 PLN</td>
+                            <td><strong>550 PLN</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 31</td>
+                            <td>350 PLN</td>
+                            <td>150 PLN</td>
+                            <td>150 PLN</td>
+                            <td><strong>650 PLN</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 1</td>
+                            <td>400 PLN</td>
+                            <td>180 PLN</td>
+                            <td>180 PLN</td>
+                            <td><strong>760 PLN</strong></td>
+                        </tr>
+                        <tr style="background: rgba(40, 167, 69, 0.2);">
+                            <td><strong>Jan 5 Target</strong></td>
+                            <td><strong>500 PLN</strong></td>
+                            <td><strong>250 PLN</strong></td>
+                            <td><strong>250 PLN</strong></td>
+                            <td><strong>1,000 PLN</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box" style="background: rgba(204, 91, 39, 0.2); border-color: #cc5b27;">
+                <strong style="color: #cc5b27;">Principle:</strong> Each increase is conditional on previous day performance. If any day drops below 2.0 floor, hold budget. If 2 consecutive days below floor, reduce 20%. Conservative scaling protects margin while rebuilding momentum.
+            </div>
+        </div>
+
+        <div class="section" style="background: #f0fff4;">
+            <h2 style="border-bottom-color: #28a745;">Summary: Dec 29 Actions</h2>
+            
+            <div class="metric-grid">
+                <div class="metric-card" style="border-color: #28a745;">
+                    <div class="metric-label">Balsam ABO</div>
+                    <div class="metric-value" style="color: #28a745;">+12%</div>
+                    <span class="metric-change positive">250 → 280 PLN</span>
+                </div>
+                <div class="metric-card" style="border-color: #28a745;">
+                    <div class="metric-label">Sold out Scale</div>
+                    <div class="metric-value" style="color: #28a745;">+18%</div>
+                    <span class="metric-change positive">85 → 100 PLN</span>
+                </div>
+                <div class="metric-card" style="border-color: #6c757d;">
+                    <div class="metric-label">HM Deo ABO</div>
+                    <div class="metric-value" style="color: #6c757d;">HOLD</div>
+                    <span class="metric-change neutral">130 PLN</span>
+                </div>
+                <div class="metric-card" style="border-color: #dc3545;">
+                    <div class="metric-label">Body Butter</div>
+                    <div class="metric-value" style="color: #dc3545;">PAUSE</div>
+                    <span class="metric-change negative">50 → 0 PLN</span>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 25px; border-radius: 10px; margin-top: 25px; border: 2px solid #28a745;">
+                <h3 style="color: #28a745; margin-top: 0;">Net Budget Change</h3>
+                <p style="font-size: 18px; line-height: 1.8;">
+                    HM daily spend moves from ~465 PLN to ~510 PLN (+10%). Conservative increase backed by data. Balsam and Sold out green Scale earning their budget increases with consistent above-floor performance. Body Butter pause saves 50 PLN/day from non-performing spend. Ready to scale further if Dec 29-30 holds.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Prepared by Heath Media | December 29, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
